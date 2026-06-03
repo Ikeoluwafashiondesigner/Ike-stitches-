@@ -132,7 +132,7 @@ function payWithPaystack() {
                 }
         
                 // 1. VERIFY PAYMENT
-                const verify = await fetch("/api/verify-payment", {
+                const verify = await fetch("https://ike-elite-backend.onrender.com/api/verify-payment", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -248,7 +248,7 @@ async function saveOrder(reference) {
     const token = localStorage.getItem("token");
 
     const styleKey = localStorage.getItem("styleKey");
-    const style = allStyles.find(s => s.id === styleKey);
+    const style = allStylesSafe.find(s => s.id === styleKey);
 
     const quantity = parseInt(document.getElementById("quantity")?.value) || 1;
 
@@ -260,7 +260,7 @@ async function saveOrder(reference) {
     const hip = document.getElementById("hip")?.value;
     const length = document.getElementById("length")?.value;
 
-    const res = await fetch("/api/order", {
+    const res = await fetch("https://ike-elite-backend.onrender.com/api/order", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -71,7 +71,7 @@ function showToast(message,type="success"){
     try{
   
       const res = await fetch(
-        "http://localhost:3000/api/login",
+        "https://ike-elite-backend.onrender.com/api/login",
         {
           method:"POST",
   
@@ -188,7 +188,7 @@ async function register() {
     try{
   
       const res = await fetch(
-        "http://localhost:3000/api/register",
+        "https://ike-elite-backend.onrender.com/api/register",
         {
           method:"POST",
   
@@ -279,7 +279,7 @@ async function resetPassword(){
     try{
   
       const res = await fetch(
-        "http://localhost:3000/api/reset-password",
+        "https://ike-elite-backend.onrender.com/api/reset-password",
         {
           method:"POST",
   

@@ -382,7 +382,7 @@ function toggleCart(){
     function addToCart(styleKey){
 
         const style =
-        allStyles.find(
+        allStylesSafe.find(
         item => item.id === styleKey
         );
         

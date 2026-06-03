@@ -16,7 +16,7 @@ async function loadMyOrders() {
 
     try {
 
-        const res = await fetch("/api/my-orders", {
+        const res = await fetch("https://ike-elite-backend.onrender.com/api/my-orders", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + token

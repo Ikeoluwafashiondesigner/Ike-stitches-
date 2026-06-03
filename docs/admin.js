@@ -7,7 +7,7 @@ async function checkAdmin() {
         return;
     }
 
-    const res = await fetch("/api/me", {
+    const res = await fetch("https://ike-elite-backend.onrender.com/api/me", {
         headers: {
             Authorization: "Bearer " + token
         }
@@ -26,7 +26,7 @@ function loadOrders() {
 
     const token = localStorage.getItem("token");
 
-    fetch("/api/admin/orders", {
+    fetch("https://ike-elite-backend.onrender.com/api/admin/orders", {
         headers: {
             Authorization: "Bearer " + token
         }
@@ -67,7 +67,7 @@ function updateStatus(id, status) {
 
     const token = localStorage.getItem("token");
 
-    fetch(`/api/order/${id}/status`, {
+    fetch(`https://ike-elite-backend.onrender.com/api/order/${id}/status`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
@@ -85,7 +85,7 @@ function loadStats() {
 
     const token = localStorage.getItem("token");
 
-    fetch("/api/admin/stats", {
+    fetch("https://ike-elite-backend.onrender.com/api/admin/stats", {
         headers: {
             Authorization: "Bearer " + token
         }

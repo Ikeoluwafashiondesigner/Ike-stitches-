@@ -18,7 +18,7 @@
     
     function openProduct(styleKey){
         const style =
-        allStyles.find(
+        allStylesSafe.find(
         item => item.id === styleKey
         );
 
@@ -142,7 +142,7 @@ function filterGallery(category){
     function quickView(styleKey){
     
     const style =
-    allStyles.find(
+    allStylesSafe.find(
     item => item.id === styleKey
     );
     
