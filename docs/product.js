@@ -227,7 +227,25 @@ typeof allStyles !== "undefined"
     "cart",
     JSON.stringify(cart)
     );
-    
+    function toastBox(message){
+
+    const toast =
+    document.getElementById("toast");
+
+    if(!toast){
+        alert(message);
+        return;
+    }
+
+    toast.innerText = message;
+
+    toast.classList.add("show-toast");
+
+    setTimeout(()=>{
+        toast.classList.remove("show-toast");
+    },3000);
+
+}
     toastBox("Added to cart");
     
     updateCartCount();
