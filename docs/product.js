@@ -539,3 +539,39 @@ function toastBox(message){
     },3000);
 
 }
+function updateCartCount(){
+
+    const cart =
+    JSON.parse(
+    localStorage.getItem("cart")
+    ) || [];
+
+    const cartCount =
+    document.getElementById("cartCount");
+
+    if(!cartCount) return;
+
+    const totalQty =
+    cart.reduce((total,item)=>{
+
+        return total +
+        Number(item.qty || 1);
+
+    },0);
+
+    cartCount.innerText = totalQty;
+
+}
+document.addEventListener(
+"DOMContentLoaded",
+function(){
+
+    loadProductPage();
+
+    saveRecentlyViewed();
+
+    loadRecentProducts();
+
+    updateCartCount();
+
+});
