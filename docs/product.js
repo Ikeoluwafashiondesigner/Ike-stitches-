@@ -248,9 +248,8 @@ typeof allStyles !== "undefined"
 }
     toastBox("Added to cart");
     
-    updateCartCount();
     
-    }
+}
   
   
   // ============================================
