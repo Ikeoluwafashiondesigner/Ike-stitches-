@@ -3,7 +3,10 @@
 // IKE-STITCHES PRODUCT PAGE SYSTEM
 // ============================================
 
-
+const allStylesSafe =
+typeof allStyles !== "undefined"
+? allStyles
+: [];
 // ============================================
 // STYLE DATABASE
 // ============================================
@@ -281,8 +284,8 @@
       if(key === currentKey) return;
   
       const style =
-      allStyles.find(
-      item => item.id === styleKey
+      allStylesSafe.find(
+      item => item.id === key
       );
   
       const image =
@@ -399,8 +402,8 @@
       if(!styleDetails[key]) return;
   
       const style =
-      allStyles.find(
-      item => item.id === styleKey
+      allStylesSafe.find(
+      item => item.id === key
       );
   
       const image =
