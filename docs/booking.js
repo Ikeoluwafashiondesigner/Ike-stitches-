@@ -127,7 +127,7 @@ function payWithPaystack() {
         currency: "NGN",
         ref: "IKE_" + Date.now(),
 
-        callback: function (response) {
+        callback:async function (response) {
 
             try {
         
